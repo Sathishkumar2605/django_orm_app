@@ -25,9 +25,7 @@ SECRET_KEY = '-5#&jr+^4n$#&6ix5335+7duo#j485^db-61c%xz7l0+qi0swq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'gokulvijayaramanuja.student.saveetha.in'
-]
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
