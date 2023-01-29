@@ -4,55 +4,57 @@
 To develop a Django application to store and retrieve data from a database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
+![Screenshot_20230129_125320](https://user-images.githubusercontent.com/119404415/215311686-a7b608da-69b2-4135-b29a-08b00d39e4c8.png)
 
-Include your ER diagram here
-![OUTPUT](images/pic3.png)
 
 ## DESIGN STEPS
 
 ### STEP 1:
 Cloning of repository.Setting up of admin and models
+
 ### STEP 2:
 To make all migrations in the app. Test the server.
+
 ### STEP 3:
 Include the details in the tables.
 
-Write your own steps
-
 ## PROGRAM
 
-Include your code here
-#admin.py:
+
+admin.py:
+```
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
+from.models import Employee,EmployeeAdmin
 
-#Register your models here.
 admin.site.register(Employee,EmployeeAdmin)
-
-#models.py:
+```
+models.py:
+```
 from django.db import models
 from django.contrib import admin
 
-#Create your models here.
+
+
 class Employee (models.Model):
-    employeeid=models.CharField(primary_key=True,max_length=20,help_text="employeeid")
-    name=models.CharField(max_length=100)
-    age=models.IntegerField()
-    email=models.EmailField()
-    role=models.CharField(max_length=20)
+    emp_id=models.CharField(primary_key=True,max_length=4,help_text="Employee ID")
+    ename=models.CharField(max_length=50)
+    post=models.CharField(max_length=20)
     salary=models.IntegerField()
+    email=models.EmailField()    
+
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('employeeid','name','age','email','role','salary')
-
-
+    list_display=('emp_id','ename','post','salary','email') 
+```
 ## OUTPUT
 
 ## Employee table with 10 records
-![OUTPUT](images/PICTURE3.png)
+![Screenshot (23)](https://user-images.githubusercontent.com/119404415/215311836-9b0989ac-c8ff-4704-bd35-e973ad98baf8.png)
+
 
 ## Primary key demo
-![OUTPUT](images/PICTURE2.png)
+![Screenshot (25)](https://user-images.githubusercontent.com/119404415/215311881-539a1582-21e5-4f00-9eb3-5668c1ad709c.png)
+
 
 ## RESULT
 The program for Django ORM App is executed successfully.
